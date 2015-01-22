@@ -6,6 +6,10 @@ RSpec.describe Book, :type => :model do
   	expect(book.titlename).to eq("The Wise Old Man")
   end
 
-  it "should have an author"
+  it "should return the author's name" do
+  	book = FactoryGirl.build(:book)
+  	expect(book.authorname).to eq("Kevin Yang")
+  end
+
   it "should have at least 100 pages"
 end
